@@ -1,0 +1,33 @@
+<h3>OI</h3>
+
+<h4>{{nome}}</h4>
+
+<div>
+  <label for="campo-nome">Nome</label>
+  <input id="campo-nome" [(ngModel)]="nome">
+</div>
+
+<div>
+  <label for="campo-sobrenome">Sobrenome</label>
+  <input id="campo-sobrenome" 
+    [(ngModel)]="sobrenome">
+</div>
+
+<button (click)="salvar()">Salvar</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pessoa of pessoas">
+      <td>{{pessoa.id}}</td>
+      <td>{{pessoa.nome}}</td>
+      <td>{{pessoa.sobrenome}}</td>
+    </tr>
+  </tbody>
+</table>
